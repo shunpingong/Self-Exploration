@@ -5,6 +5,7 @@ This repository is the parent workspace for experiments, prototypes, and local i
 ## Current Projects
 
 - `Nemotron/` contains the FastAPI backend exploration for NVIDIA Nemotron.
+- `Openclaw/` contains the Openclaw exploration for local LLM inference.
 
 ## Working Style
 
