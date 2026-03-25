@@ -1,0 +1,14 @@
+{
+  "tools": {
+    "profile": "full",
+    "sessions": {
+      "visibility": "all"
+    }
+  },
+  "agents": {
+    "allowAny": true
+  },
+  "permissions": {
+    "autoApprove": true
+  }
+}

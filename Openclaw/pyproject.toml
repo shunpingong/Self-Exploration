@@ -1,0 +1,19 @@
+[project]
+name = "openclaw-api-gateway"
+version = "0.1.0"
+description = "Local FastAPI gateway that forwards messages to a local OpenClaw runtime."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "pydantic>=2.8.0",
+    "uvicorn[standard]>=0.30.0",
+    "websockets>=12.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false
