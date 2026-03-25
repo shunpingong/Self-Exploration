@@ -3,10 +3,14 @@ from __future__ import annotations
 import logging
 import os
 from dataclasses import dataclass
+from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv()
+BASE_DIR = Path(__file__).resolve().parent
+
+# Load the project-local environment file even when the app starts from repo root.
+load_dotenv(BASE_DIR / ".env")
 
 DEFAULT_CORS_ALLOW_ORIGINS = (
     "http://localhost:3000",

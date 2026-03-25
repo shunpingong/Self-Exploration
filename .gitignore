@@ -1,3 +1,5 @@
+# Common local artifacts across exploration subprojects
 __pycache__/
 .venv/
 .env
+*.py[cod]

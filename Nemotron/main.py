@@ -15,13 +15,23 @@ from fastapi.responses import StreamingResponse
 from openai import OpenAI
 from pydantic import BaseModel, Field, field_validator
 
-from settings import settings as app_settings
-from tool_features import (
-    DEFAULT_TOOLS,
-    build_assistant_tool_call_message,
-    build_tool_result_messages,
-    execute_tool_calls,
-)
+# Support both package imports from repo root and direct script execution in Nemotron/.
+try:
+    from .settings import settings as app_settings
+    from .tool_features import (
+        DEFAULT_TOOLS,
+        build_assistant_tool_call_message,
+        build_tool_result_messages,
+        execute_tool_calls,
+    )
+except ImportError:
+    from settings import settings as app_settings
+    from tool_features import (
+        DEFAULT_TOOLS,
+        build_assistant_tool_call_message,
+        build_tool_result_messages,
+        execute_tool_calls,
+    )
 
 logging.basicConfig(level=app_settings.log_level, format=app_settings.log_format)
 logger = logging.getLogger(app_settings.app_log_name)
